@@ -6,4 +6,10 @@
 
 .centered {
     text-align: center;
+    align-items: center;
+}
+
+.e-icons.e-large {
+    font-size: 70px !important;
+    justify-content: center;
 }

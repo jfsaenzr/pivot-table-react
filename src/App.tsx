@@ -10,30 +10,6 @@ import { pivotData } from "./data";
 import "./App.css";
 
 function App() {
-  ////////////////////////////////////////////////////////////////////////////////
-  /////////////////////////////// CONEXION API ///////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////
-
-  /*const [pivotData, setPivotData] = useState(null);
-
-  useEffect(() => {
-    fetch("http://10.109.9.193:8282/cubokbit/get_sample", {
-      method: "POST",
-      body: JSON.stringify({
-        nombreArchivo: "santacruz_SeguimientoFacturacionMedicalERP",
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => setPivotData(response));
-  }, []);*/
-
-  /////////////////////////////////////////////////////////////////////////////////
-  /////////////////////////////////////////////////////////////////////////////////
-
   let pivotObj: PivotView | null;
   const setTarget = () => {
     (
@@ -43,8 +19,23 @@ function App() {
   };
   if (!pivotData) {
     return (
-      <div>
-        <h5>Cargando</h5>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }}
+      >
+        <div>
+          <span
+            className="e-icons e-large e-download"
+            style={{
+              display: "flex",
+            }}
+          ></span>
+          <h1>Cargando</h1>
+        </div>
       </div>
     );
   } else {
