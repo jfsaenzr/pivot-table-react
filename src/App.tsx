@@ -10,6 +10,10 @@ import { pivotData } from "./data";
 import "./App.css";
 
 function App() {
+  const handleClick = () => {
+    window.location.reload();
+  };
+
   let pivotObj: PivotView | null;
   const setTarget = () => {
     (
@@ -42,6 +46,9 @@ function App() {
     return (
       <div id="wrapper">
         <h1 className="centered">Cubo facturación medical ERP</h1>
+        <button className="button" type="button" onClick={handleClick}>
+          Reset
+        </button>
         <PivotViewComponent
           ref={(pv) => (pivotObj = pv)}
           width={"100%"}
@@ -49,7 +56,9 @@ function App() {
           displayOption={{ view: "Both" }}
           showFieldList={true}
           showToolbar={true}
-          toolbar={["Grid", "Chart", "FieldList"]}
+          toolbar={["Grid", "Chart", "FieldList", "Export"]}
+          allowExcelExport={true}
+          allowPdfExport={true}
           chartTypes={[
             "Line",
             "Column",
