@@ -2,6 +2,7 @@
 
 #wrapper {
     padding: 2%;
+    height: 710px;
 }
 
 .centered {
@@ -12,6 +13,7 @@
 .e-icons.e-large {
     font-size: 70px !important;
     justify-content: center;
+    color: #6e6e6e;
 }
 
 h1 {
@@ -34,4 +36,47 @@ h1 {
 .button:hover {
     background-color: #6e6e6e;
     color: white;
+}
+
+/*Field list EXTERNO*/
+#pivotview_1821633465_0_PivotFieldList_Wrapper {
+    max-width: 1000px !important;
+    height: 860px !important;
+}
+
+.e-pivotfieldlist-wrapper.e-dialog {
+    max-height: 700px !important;
+}
+
+/*Field list INTERNO*/
+.e-field-table {
+    height: 568px !important;
+}
+
+.e-pivotfieldlist-wrapper .e-field-list-tree-outer-div {
+    height: 530px !important;
+}
+
+.e-axis-table {
+    height: 570px;
+}
+
+.e-field-list-filters {
+    height: 280px;
+}
+
+.e-field-list-rows {
+    height: 280px;
+}
+
+.e-field-list-columns {
+    height: 280px;
+}
+
+.e-field-list-values {
+    height: 280px;
+}
+
+.e-draggable-prompt {
+    height: 50px !important;
 }
