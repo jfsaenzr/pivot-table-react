@@ -39,7 +39,7 @@ h1 {
 }
 
 /*Field list EXTERNO*/
-#pivotview_1821633465_0_PivotFieldList_Wrapper {
+.e-pivotfieldlist-wrapper {
     max-width: 1000px !important;
     height: 860px !important;
 }
