@@ -10,6 +10,29 @@ import { pivotData } from "./data";
 import "./App.css";
 
 function App() {
+  /*********************************************************************************/
+  /********************************* CONEXION API **********************************/
+  /*********************************************************************************/
+
+  /*const [pivotData, setPivotData] = useState(null);
+
+  useEffect(() => {
+    fetch("http://10.109.9.193:8282/cubokbit/get_sample", {
+      method: "POST",
+      body: JSON.stringify({
+        nombreArchivo: "santacruz_SeguimientoFacturacionMedicalERP",
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .catch((error) => console.error("Error:", error))
+      .then((response) => setPivotData(response));
+  }, []);*/
+  /*********************************************************************************/
+  /*********************************************************************************/
+
   const handleClick = () => {
     window.location.reload();
   };
@@ -38,7 +61,7 @@ function App() {
               display: "flex",
             }}
           ></span>
-          <h1>Cargando</h1>
+          <h1>Cargando...</h1>
         </div>
       </div>
     );
@@ -46,13 +69,10 @@ function App() {
     return (
       <div id="wrapper">
         <h1 className="centered">Cubo facturación medical ERP</h1>
-        <button className="button" type="button" onClick={handleClick}>
-          Reset
-        </button>
         <PivotViewComponent
           ref={(pv) => (pivotObj = pv)}
           width={"100%"}
-          height={500}
+          height={700}
           displayOption={{ view: "Both" }}
           showFieldList={true}
           showToolbar={true}
@@ -84,21 +104,24 @@ function App() {
             "StackingArea100",
           ]}
           showValuesButton={true}
-          allowCalculatedField={true}
-          allowDeferLayoutUpdate={true}
           dataBound={setTarget}
           dataSourceSettings={{
             dataSource: pivotData,
             rows: [{ name: "IpsPrimariaMED" }],
             columns: [{ name: "CentroCostoDERP" }],
             values: [{ name: "ValorSaldoHoyERP", caption: "ValorSaldoHoyERP" }],
-            formatSettings: [{ name: "Amount" }],
+            //expandAll: true,
           }}
         >
           <Inject services={[FieldList, Toolbar]}></Inject>
         </PivotViewComponent>
+
+        <button className="button" type="button" onClick={handleClick}>
+          Reset
+        </button>
       </div>
     );
   }
 }
+
 export default App;
