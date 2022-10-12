@@ -72,7 +72,7 @@ function App() {
         <PivotViewComponent
           ref={(pv) => (pivotObj = pv)}
           width={"100%"}
-          height={700}
+          height={800}
           displayOption={{ view: "Both" }}
           showFieldList={true}
           showToolbar={true}

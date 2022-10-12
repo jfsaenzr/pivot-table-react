@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pivot-table-react/static/css/main.93bc8902.css",
+    "main.css": "/pivot-table-react/static/css/main.cc999eb2.css",
     "main.js": "/pivot-table-react/static/js/main.22ce206a.js",
     "static/js/787.f76fabcb.chunk.js": "/pivot-table-react/static/js/787.f76fabcb.chunk.js",
     "index.html": "/pivot-table-react/index.html",
-    "main.93bc8902.css.map": "/pivot-table-react/static/css/main.93bc8902.css.map",
+    "main.cc999eb2.css.map": "/pivot-table-react/static/css/main.cc999eb2.css.map",
     "main.22ce206a.js.map": "/pivot-table-react/static/js/main.22ce206a.js.map",
     "787.f76fabcb.chunk.js.map": "/pivot-table-react/static/js/787.f76fabcb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93bc8902.css",
+    "static/css/main.cc999eb2.css",
     "static/js/main.22ce206a.js"
   ]
 }
