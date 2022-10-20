@@ -10,29 +10,6 @@ import { pivotData } from "./data";
 import "./App.css";
 
 function App() {
-  /*********************************************************************************/
-  /********************************* CONEXION API **********************************/
-  /*********************************************************************************/
-
-  /*const [pivotData, setPivotData] = useState(null);
-
-  useEffect(() => {
-    fetch("http://10.109.9.193:8282/cubokbit/get_sample", {
-      method: "POST",
-      body: JSON.stringify({
-        nombreArchivo: "santacruz_SeguimientoFacturacionMedicalERP",
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => setPivotData(response));
-  }, []);*/
-  /*********************************************************************************/
-  /*********************************************************************************/
-
   const handleClick = () => {
     window.location.reload();
   };
@@ -107,9 +84,9 @@ function App() {
           dataBound={setTarget}
           dataSourceSettings={{
             dataSource: pivotData,
-            rows: [{ name: "IpsPrimariaMED" }],
-            columns: [{ name: "CentroCostoDERP" }],
-            values: [{ name: "ValorSaldoHoyERP", caption: "ValorSaldoHoyERP" }],
+            rows: [{ name: "Country" }],
+            columns: [{ name: "Year" }],
+            values: [{ name: "Amount", caption: "Amount" }],
             //expandAll: true,
           }}
         >
