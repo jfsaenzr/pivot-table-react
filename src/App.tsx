@@ -45,7 +45,7 @@ function App() {
   } else {
     return (
       <div id="wrapper">
-        <h1 className="centered">Cubo facturación medical ERP</h1>
+        <h1 className="centered">Pivot-Table</h1>
         <PivotViewComponent
           ref={(pv) => (pivotObj = pv)}
           width={"100%"}
